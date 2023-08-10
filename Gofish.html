@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+        let players = [player1 = [], player2 = [], player3 = [], player4 = []];
+        let suite = ["C","D","S","H"];
+        let pile = [];
+        for (let i = 0; i < 4; i++) 
+        {
+
+            for (let j = 0;j < 13; j++)
+            {
+               // pile[1*(i+i)] = j+1;
+               if (j == 0)
+               {
+                pile.push("A"+suite[i]+" ");
+               } else if (j == 10)
+               {
+                pile.push("J"+suite[i]+" ");
+               }else if (j == 11)
+               {
+                pile.push("Q"+suite[i]+" ");
+               }else if (j == 12)
+               {
+                pile.push("K"+suite[i]+" ");
+               }else
+               {
+                pile.push((j+1)+suite[i]+" ");
+               }
+                
+            }
+        }
+      
+        //let stuff = [0.25,0.50,0.75,1];
+        for (let i = 0; i < pile.length; i++)
+        {
+            document.write(pile[i]+" ");
+            if (i == 12)
+            {
+                document.write("<br/> ");
+            } else if (i == 25)
+            {
+                document.write("<br/> ");
+            } else if (i == 38)
+            {
+                document.write("<br/> ");
+            } 
+
+        }
+
+        for (let j = 0; j < 52; j++)
+        {
+            let rand = Math.random() * 10;
+            if (rand > 5)
+            {
+                pile.reverse();
+            }
+            
+        }
+        
+    </script>
+</body>
+</html>
